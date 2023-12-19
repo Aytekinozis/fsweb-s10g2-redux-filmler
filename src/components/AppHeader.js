@@ -19,7 +19,13 @@ const AppHeader = (props) => {
     <div className="flex justify-between items-center shadow rounded-md bg-white p-2 pl-3 my-3">
       <h2 className="text-zinc-600">{appTitle}</h2>
       <div className="flex items-center gap-2">
-        <div className="myButton bg-blue-600 hover:bg-blue-500">
+        <div
+          className={
+            displayFavorites
+              ? "myButton bg-yellow-600 hover:bg-yellow-500"
+              : "myButton bg-red-600 hover:bg-red-500"
+          }
+        >
           <span onClick={handleToggle}>
             Favorileri {displayFavorites ? "gizle" : "göster"}
           </span>
